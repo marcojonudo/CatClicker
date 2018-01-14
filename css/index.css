@@ -1,0 +1,13 @@
+body {
+    display: flex;
+}
+
+section {
+    flex-grow: 4;
+    order: 2;
+}
+
+aside {
+    flex-grow: 1;
+    order: 1;
+}
