@@ -17,7 +17,7 @@ aside {
     order: 3;
 }
 
-#adminInputs {
+#adminInputsContainer {
     display: flex;
     flex-direction: column;
 }
