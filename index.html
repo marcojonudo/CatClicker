@@ -6,31 +6,19 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/knockout-3.4.2.js"></script>
     <script src="js/index.js"></script>
-	<title>Your Website</title>
+	<title>Marco's cats</title>
 </head>
 
 <body>
 
 	<section>
-        <p class="catName"></p>
-        <img id="catImg" src="img/cat1.jpg"></img>
-        <p><span class="catName"></span> was clicked <span id="catImgCounter">0</span> times</p>
+        <p data-bind="text: catName"></p>
+        <p data-bind="text: catCategory"></p>
+        <img data-bind="click: incrementCounter, attr: {src: imgSrc}"></img>
+        <p><span data-bind="text: catName"></span> was clicked <span data-bind="text: clickCounter"></span> times</p>
 	</section>
-
-	<aside>
-	</aside>
-
-	<div id="adminSection">
-		<button id="adminButton">Admin</button>
-		<div id="adminInputsContainer" class="hidden">
-			<label>Change cat name: <input type="text" name="name"></input></label>
-			<label>Change cat URL: <input type="text" name="url"></input></label>
-			<label>Change cat counter: <input type="number" name="clickCounter"></input></label>
-			<button id="cancelButton">Cancelar</button>
-			<button id="acceptButton">Aceptar</button>
-		</div>
-	</div>
 
 </body>
 
